@@ -39,7 +39,6 @@ public class Main {
             if (opcion == 1) {
 
                 int id;
-                int prioridad;
                 String nombre;
                 String vuelo;
 
@@ -53,10 +52,7 @@ public class Main {
                 System.out.print("Vuelo: ");
                 vuelo = entrada.nextLine();
 
-                System.out.print("Prioridad: ");
-                prioridad = entrada.nextInt();
-
-                Pasajero nuevoPasajero = new Pasajero(id, nombre, vuelo, prioridad);
+                Pasajero nuevoPasajero = new Pasajero(id, nombre, vuelo);
 
                 checkIn.registrarPasajero(nuevoPasajero);
 
@@ -96,13 +92,13 @@ public class Main {
 
                 int idMaleta;
                 int idPasajero;
-                double peso;
+                int peso;
 
                 System.out.print("ID maleta: ");
                 idMaleta = entrada.nextInt();
 
                 System.out.print("Peso: ");
-                peso = entrada.nextDouble();
+                peso = entrada.nextInt();
 
                 System.out.print("ID pasajero: ");
                 idPasajero = entrada.nextInt();
